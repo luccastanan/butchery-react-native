@@ -46,3 +46,18 @@ npm config rm https-proxy
 
 * yarn config delete proxy
 * yarn config delete https-proxy
+
+## Aulas
+
+### Segunda (17/06)
+
+* Clonando projeto
+* Preparando Live Reload
+* Criando a tela Login
+* Estilizando os components com StyleSheet
+* Trabalhando com rotas utilizando react-navigation
+* Criando a tela Home
+* Trabalhando com transição entre telas
+* Modificando a NavigationBar
+* Entendo e trabalhando o state do React
+* Criando uma listagem de produtos com Flatlist
