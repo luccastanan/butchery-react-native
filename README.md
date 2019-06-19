@@ -49,7 +49,7 @@
 
 ## Aulas
 
-### Segunda (17/06)
+### 17/06 (segunda)
 
 * Clonando projeto
 * Preparando Live Reload
@@ -62,7 +62,7 @@
 * Entendo e trabalhando o state do React
 * Criando uma listagem de produtos com Flatlist
 
-### Terça (18/06)
+### 18/06 (terça)
 
 * Trocando informações entre telas
 * Estilizando a listagem
@@ -70,3 +70,14 @@
 * Colocando dados da API na listagem
 * Criando tela Produto
 * Selecionando produto da listagem e exibindo dados na tela Produto 
+
+### 19/06 (quarta)
+
+* Criando multiplas stacks para as rotas
+* Estilizando a NavigationBar
+* Entendo o conceito do Component
+* Criando components
+* Trabalhando com FAB
+* Trabalhando com ícone
+* Criando a tela NovoProduto
+* Enviando (POST) dados para a API
