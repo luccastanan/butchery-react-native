@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import { View, Text, FlatList, TouchableOpacity, StyleSheet } from "react-native";
+import FAB from "react-native-action-button";
+import { Icon } from "react-native-elements";
+import CPContainer from "../components/CPContainer";
+
 
 export default class HomeScreen extends Component {
 
@@ -9,7 +13,7 @@ export default class HomeScreen extends Component {
 
     render() {
         return (
-            <View style={localStyles.container}>
+            <CPContainer>
                 <Text>{this.props.navigation.getParam('email', 'NÃO ENCONTROU')}</Text>
                 <FlatList
                     data={this.state.products}
@@ -23,12 +27,23 @@ export default class HomeScreen extends Component {
                     )}
                     keyExtractor={(item, index) => item.id.toString()}
                 />
-            </View>
+                <FAB
+                    buttonColor='#8e44ad'
+                    onPress={() => this.props.navigation.navigate('NewProductScreen')}
+                    /*renderIcon={() => 
+                        <Icon 
+                            name='shopping-cart'
+                            type='font-awesome'
+                            color='white'
+                        />
+                    }*/
+                />
+            </CPContainer>
         );
     }
 
     goProduct = prod => {
-        this.props.navigation.navigate('ProductScreen', { product: prod});
+        this.props.navigation.navigate('ProductScreen', { product: prod });
     }
 
     componentDidMount() {
@@ -46,25 +61,24 @@ export default class HomeScreen extends Component {
 }
 
 const localStyles = StyleSheet.create({
-    container: {
-        flex:1
-    },
-    itemContainer:{
+    itemContainer: {
         padding: 8
     },
     item: {
         paddingVertical: 16,
-        paddingHorizontal: 24, 
+        paddingHorizontal: 24,
         borderRadius: 30,
-        flexDirection:'row', 
-        justifyContent: 'space-between', 
-        backgroundColor: '#8e44ad'
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        //backgroundColor: '#8e44ad',
+        borderWidth: 1,
+        borderColor: '#2c3e50'
     },
     name: {
-        color: 'white'
+        color: '#2c3e50'
     },
-    price:{
-        color: 'white',
-        fontWeight:'bold'
+    price: {
+        color: '#2c3e50',
+        fontWeight: 'bold'
     }
 });

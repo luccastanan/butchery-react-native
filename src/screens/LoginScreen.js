@@ -1,6 +1,8 @@
 import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 import { Input } from "react-native-elements";
+import CPButton from "../components/CPButton";
+import CPContainer from "../components/CPContainer";
 
 export default class LoginScreen extends React.Component {
 
@@ -11,7 +13,7 @@ export default class LoginScreen extends React.Component {
 
     render() {
         return (
-            <View style={styles.container}>
+            <CPContainer center>
                 <Input
                     placeholder='E-mail'
                     onChangeText={emailValue => this.setState({ email: emailValue })}
@@ -25,10 +27,8 @@ export default class LoginScreen extends React.Component {
                     secureTextEntry 
                     value={this.state.pass}
                 />
-                <TouchableOpacity style={styles.button} onPress={this.goHome}>
-                    <Text style={styles.buttonText}>Logar</Text>
-                </TouchableOpacity>
-            </View>
+                <CPButton title='Logar' onPress={this.goHome}/>
+            </CPContainer>
         );
     }
 
@@ -36,20 +36,3 @@ export default class LoginScreen extends React.Component {
         this.props.navigation.navigate('HomeScreen', { email: this.state.email });
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    button: {
-        backgroundColor: '#8e44ad',
-        padding: 16,
-        borderRadius: 30
-    },
-    buttonText: {
-        color: 'white',
-        fontSize: 16
-    }
-});
