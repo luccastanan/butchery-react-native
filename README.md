@@ -15,37 +15,37 @@
 
 #### Add
 
-* git config --global http.proxy http://<username>:<password>@proxy.muffato.com.br:3128
-* git config --global https.proxy http://<username>:<password>@proxy.muffato.com.br:3128
+* ```git config --global http.proxy http://<username>:<password>@proxy.muffato.com.br:3128```
+* ```git config --global https.proxy http://<username>:<password>@proxy.muffato.com.br:3128```
 
 #### Remove
 
-* git config --global --unset http.proxy
-* git config --global --unset https.proxy
+* ```git config --global --unset http.proxy```
+* ```git config --global --unset https.proxy```
 
 ### NPM
 
 #### Add
 
-* git config set proxy "http://<username>:<password>@proxy.muffato.com.br:3128"
-* git config set https-proxy "http://<username>:<password>@proxy.muffato.com.br:3128"
+* ```git config set proxy "http://<username>:<password>@proxy.muffato.com.br:3128"```
+* ```git config set https-proxy "http://<username>:<password>@proxy.muffato.com.br:3128"```
 
 #### Remove
 
-npm config rm proxy
-npm config rm https-proxy
+* ```npm config rm proxy```
+* ```npm config rm https-proxy```
 
 ### Yarn
 
 #### Add
 
-* yarn config set proxy http://<username>:<password>@proxy.muffato.com.br:3128
-* yarn config set https-proxy http://<username>:<password>@proxy.muffato.com.br:3128
+* ```yarn config set proxy http://<username>:<password>@proxy.muffato.com.br:3128```
+* ```yarn config set https-proxy http://<username>:<password>@proxy.muffato.com.br:3128```
 
 #### Remove
 
-* yarn config delete proxy
-* yarn config delete https-proxy
+* ```yarn config delete proxy```
+* ```yarn config delete https-proxy```
 
 ## Aulas
 
@@ -61,3 +61,12 @@ npm config rm https-proxy
 * Modificando a NavigationBar
 * Entendo e trabalhando o state do React
 * Criando uma listagem de produtos com Flatlist
+
+### Terça (18/06)
+
+* Trocando informações entre telas
+* Estilizando a listagem
+* Consumindo dados da API
+* Colocando dados da API na listagem
+* Criando tela Produto
+* Selecionando produto da listagem e exibindo dados na tela Produto 
